@@ -1,53 +1,33 @@
-# New Project Template
+# `flutter/flutter` Issue #96272 repro case
 
-This repository contains a template that can be used to seed a repository for a
-new Google open source project.
+This project is a minimised reproduction for [flutter/flutter Issue #96272](https://github.com/flutter/flutter/issues/96272)
 
-See [go/releasing](http://go/releasing) (available externally at
-https://opensource.google/docs/releasing/) for more information about
-releasing a new Google open source project.
+Building on macOS:
 
-This template uses the Apache license, as is Google's default.  See the
-documentation for instructions on using alternate license.
+```console
+$ dart run build_runner build --delete-conflicting-outputs 
+Building package executable... (1.6s)
+Built build_runner:build_runner.
+[INFO] Generating build script completed, took 455ms
+[INFO] Reading cached asset graph completed, took 63ms
+[INFO] Checking for updates since last build completed, took 554ms
+[WARNING] gql_build:serializer_builder on lib/$lib$:
+Your current `analyzer` version may not fully support your current SDK version.
 
-## How to use this template
+Analyzer language version: 2.14.0
+SDK language version: 2.15.0
 
-1. Clone it from GitHub.
-    * There is no reason to fork it.
-1. Create a new local repository and copy the files from this repo into it.
-1. Modify README.md and docs/contributing.md to represent your project, not the
-   template project.
-1. Develop your new project!
+Please update to the latest `analyzer` version (3.0.0) by running
+`flutter packages upgrade`.
 
-``` shell
-git clone https://github.com/google/new-project
-mkdir my-new-thing
-cd my-new-thing
-git init
-cp -r ../new-project/* ../new-project/.github .
-git add *
-git commit -a -m 'Boilerplate for new Google open source project'
+If you are not getting the latest version by running the above command, you
+can try adding a constraint like the following to your pubspec to start
+diagnosing why you can't get the latest version:
+
+dev_dependencies:
+  analyzer: ^3.0.0 
+
+[INFO] Running build completed, took 11.2s
+[INFO] Caching finalized dependency graph completed, took 44ms
+[INFO] Succeeded after 11.3s with 12 outputs (12 actions)
 ```
-
-## Source Code Headers
-
-Every file containing source code must include copyright and license
-information. This includes any JS/CSS files that you might be serving out to
-browsers. (This is to help well-intentioned people avoid accidental copying that
-doesn't comply with the license.)
-
-Apache header:
-
-    Copyright 2021 Google LLC
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        https://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
