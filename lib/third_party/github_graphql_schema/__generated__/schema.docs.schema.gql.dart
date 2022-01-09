@@ -3,10 +3,12 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
+import 'package:github_graphql_client%5Cthird_party%5Cgithub_graphql_schema%5C__generated__%5Cschema.docs.schema.gql.dart'
+    as _i2;
 import 'package:github_graphql_client/third_party/github_graphql_schema/__generated__/serializers.gql.dart'
     as _i1;
 import 'package:gql_code_builder/src/serializers/default_scalar_serializer.dart'
-    as _i2;
+    as _i3;
 
 part 'schema.docs.schema.gql.g.dart';
 
@@ -238,7 +240,7 @@ abstract class GAddPullRequestReviewCommentInput
 
   String get body;
   String? get clientMutationId;
-  GGitObjectID? get commitOID;
+  _i2.GGitObjectID? get commitOID;
   String? get inReplyTo;
   String? get path;
   int? get position;
@@ -266,11 +268,11 @@ abstract class GAddPullRequestReviewInput
 
   String? get body;
   String? get clientMutationId;
-  BuiltList<GDraftPullRequestReviewComment>? get comments;
-  GGitObjectID? get commitOID;
-  GPullRequestReviewEvent? get event;
+  BuiltList<_i2.GDraftPullRequestReviewComment>? get comments;
+  _i2.GGitObjectID? get commitOID;
+  _i2.GPullRequestReviewEvent? get event;
   String get pullRequestId;
-  BuiltList<GDraftPullRequestReviewThread>? get threads;
+  BuiltList<_i2.GDraftPullRequestReviewThread>? get threads;
   static Serializer<GAddPullRequestReviewInput> get serializer =>
       _$gAddPullRequestReviewInputSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -296,9 +298,9 @@ abstract class GAddPullRequestReviewThreadInput
   String get path;
   String? get pullRequestId;
   String? get pullRequestReviewId;
-  GDiffSide? get side;
+  _i2.GDiffSide? get side;
   int? get startLine;
-  GDiffSide? get startSide;
+  _i2.GDiffSide? get startSide;
   static Serializer<GAddPullRequestReviewThreadInput> get serializer =>
       _$gAddPullRequestReviewThreadInputSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers
@@ -318,7 +320,7 @@ abstract class GAddReactionInput
       _$GAddReactionInput;
 
   String? get clientMutationId;
-  GReactionContent get content;
+  _i2.GReactionContent get content;
   String get subjectId;
   static Serializer<GAddReactionInput> get serializer =>
       _$gAddReactionInputSerializer;
@@ -374,7 +376,7 @@ abstract class GAddVerifiableDomainInput
       _$GAddVerifiableDomainInput;
 
   String? get clientMutationId;
-  GURI get domain;
+  _i2.GURI get domain;
   String get ownerId;
   static Serializer<GAddVerifiableDomainInput> get serializer =>
       _$gAddVerifiableDomainInputSerializer;
@@ -456,8 +458,8 @@ abstract class GAuditLogOrder
   factory GAuditLogOrder([Function(GAuditLogOrderBuilder b) updates]) =
       _$GAuditLogOrder;
 
-  GOrderDirection? get direction;
-  GAuditLogOrderField? get field;
+  _i2.GOrderDirection? get direction;
+  _i2.GAuditLogOrderField? get field;
   static Serializer<GAuditLogOrder> get serializer =>
       _$gAuditLogOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -490,7 +492,7 @@ abstract class GBase64String
   String get value;
   @BuiltValueSerializer(custom: true)
   static Serializer<GBase64String> get serializer =>
-      _i2.DefaultScalarSerializer<GBase64String>(
+      _i3.DefaultScalarSerializer<GBase64String>(
           (Object serialized) => GBase64String((serialized as String?)));
 }
 
@@ -549,7 +551,7 @@ abstract class GChangeUserStatusInput
 
   String? get clientMutationId;
   String? get emoji;
-  GDateTime? get expiresAt;
+  _i2.GDateTime? get expiresAt;
   bool? get limitedAvailability;
   String? get message;
   String? get organizationId;
@@ -570,8 +572,8 @@ abstract class GCheckAnnotationData
           [Function(GCheckAnnotationDataBuilder b) updates]) =
       _$GCheckAnnotationData;
 
-  GCheckAnnotationLevel get annotationLevel;
-  GCheckAnnotationRange get location;
+  _i2.GCheckAnnotationLevel get annotationLevel;
+  _i2.GCheckAnnotationRange get location;
   String get message;
   String get path;
   String? get rawDetails;
@@ -684,8 +686,8 @@ abstract class GCheckRunFilter
 
   int? get appId;
   String? get checkName;
-  GCheckRunType? get checkType;
-  GCheckStatusState? get status;
+  _i2.GCheckRunType? get checkType;
+  _i2.GCheckStatusState? get status;
   static Serializer<GCheckRunFilter> get serializer =>
       _$gCheckRunFilterSerializer;
   Map<String, dynamic> toJson() =>
@@ -702,8 +704,8 @@ abstract class GCheckRunOutput
   factory GCheckRunOutput([Function(GCheckRunOutputBuilder b) updates]) =
       _$GCheckRunOutput;
 
-  BuiltList<GCheckAnnotationData>? get annotations;
-  BuiltList<GCheckRunOutputImage>? get images;
+  BuiltList<_i2.GCheckAnnotationData>? get annotations;
+  BuiltList<_i2.GCheckRunOutputImage>? get images;
   String get summary;
   String? get text;
   String get title;
@@ -726,7 +728,7 @@ abstract class GCheckRunOutputImage
 
   String get alt;
   String? get caption;
-  GURI get imageUrl;
+  _i2.GURI get imageUrl;
   static Serializer<GCheckRunOutputImage> get serializer =>
       _$gCheckRunOutputImageSerializer;
   Map<String, dynamic> toJson() =>
@@ -871,7 +873,7 @@ abstract class GCloneTemplateRepositoryInput
   String get name;
   String get ownerId;
   String get repositoryId;
-  GRepositoryVisibility get visibility;
+  _i2.GRepositoryVisibility get visibility;
   static Serializer<GCloneTemplateRepositoryInput> get serializer =>
       _$gCloneTemplateRepositoryInputSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -1029,8 +1031,8 @@ abstract class GCommitContributionOrder
           [Function(GCommitContributionOrderBuilder b) updates]) =
       _$GCommitContributionOrder;
 
-  GOrderDirection get direction;
-  GCommitContributionOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GCommitContributionOrderField get field;
   static Serializer<GCommitContributionOrder> get serializer =>
       _$gCommitContributionOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -1126,7 +1128,7 @@ abstract class GContributionOrder
   factory GContributionOrder([Function(GContributionOrderBuilder b) updates]) =
       _$GContributionOrder;
 
-  GOrderDirection get direction;
+  _i2.GOrderDirection get direction;
   static Serializer<GContributionOrder> get serializer =>
       _$gContributionOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -1204,7 +1206,7 @@ abstract class GCreateBranchProtectionRuleInput
   String get repositoryId;
   int? get requiredApprovingReviewCount;
   BuiltList<String>? get requiredStatusCheckContexts;
-  BuiltList<GRequiredStatusCheckInput>? get requiredStatusChecks;
+  BuiltList<_i2.GRequiredStatusCheckInput>? get requiredStatusChecks;
   bool? get requiresApprovingReviews;
   bool? get requiresCodeOwnerReviews;
   bool? get requiresCommitSignatures;
@@ -1234,18 +1236,18 @@ abstract class GCreateCheckRunInput
           [Function(GCreateCheckRunInputBuilder b) updates]) =
       _$GCreateCheckRunInput;
 
-  BuiltList<GCheckRunAction>? get actions;
+  BuiltList<_i2.GCheckRunAction>? get actions;
   String? get clientMutationId;
-  GDateTime? get completedAt;
-  GCheckConclusionState? get conclusion;
-  GURI? get detailsUrl;
+  _i2.GDateTime? get completedAt;
+  _i2.GCheckConclusionState? get conclusion;
+  _i2.GURI? get detailsUrl;
   String? get externalId;
-  GGitObjectID get headSha;
+  _i2.GGitObjectID get headSha;
   String get name;
-  GCheckRunOutput? get output;
+  _i2.GCheckRunOutput? get output;
   String get repositoryId;
-  GDateTime? get startedAt;
-  GRequestableCheckStatusState? get status;
+  _i2.GDateTime? get startedAt;
+  _i2.GRequestableCheckStatusState? get status;
   static Serializer<GCreateCheckRunInput> get serializer =>
       _$gCreateCheckRunInputSerializer;
   Map<String, dynamic> toJson() =>
@@ -1264,7 +1266,7 @@ abstract class GCreateCheckSuiteInput
       _$GCreateCheckSuiteInput;
 
   String? get clientMutationId;
-  GGitObjectID get headSha;
+  _i2.GGitObjectID get headSha;
   String get repositoryId;
   static Serializer<GCreateCheckSuiteInput> get serializer =>
       _$gCreateCheckSuiteInputSerializer;
@@ -1284,11 +1286,11 @@ abstract class GCreateCommitOnBranchInput
           [Function(GCreateCommitOnBranchInputBuilder b) updates]) =
       _$GCreateCommitOnBranchInput;
 
-  GCommittableBranch get branch;
+  _i2.GCommittableBranch get branch;
   String? get clientMutationId;
-  GGitObjectID get expectedHeadOid;
-  GFileChanges? get fileChanges;
-  GCommitMessage get message;
+  _i2.GGitObjectID get expectedHeadOid;
+  _i2.GFileChanges? get fileChanges;
+  _i2.GCommitMessage get message;
   static Serializer<GCreateCommitOnBranchInput> get serializer =>
       _$gCreateCommitOnBranchInputSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -1364,7 +1366,7 @@ abstract class GCreateDeploymentStatusInput
   String? get environment;
   String? get environmentUrl;
   String? get logUrl;
-  GDeploymentStatusState get state;
+  _i2.GDeploymentStatusState get state;
   static Serializer<GCreateDeploymentStatusInput> get serializer =>
       _$gCreateDeploymentStatusInputSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -1525,7 +1527,7 @@ abstract class GCreateProjectInput
   String get name;
   String get ownerId;
   BuiltList<String>? get repositoryIds;
-  GProjectTemplate? get template;
+  _i2.GProjectTemplate? get template;
   static Serializer<GCreateProjectInput> get serializer =>
       _$gCreateProjectInputSerializer;
   Map<String, dynamic> toJson() =>
@@ -1569,7 +1571,7 @@ abstract class GCreateRefInput
 
   String? get clientMutationId;
   String get name;
-  GGitObjectID get oid;
+  _i2.GGitObjectID get oid;
   String get repositoryId;
   static Serializer<GCreateRefInput> get serializer =>
       _$gCreateRefInputSerializer;
@@ -1592,12 +1594,12 @@ abstract class GCreateRepositoryInput
   String? get description;
   bool? get hasIssuesEnabled;
   bool? get hasWikiEnabled;
-  GURI? get homepageUrl;
+  _i2.GURI? get homepageUrl;
   String get name;
   String? get ownerId;
   String? get teamId;
   bool? get template;
-  GRepositoryVisibility get visibility;
+  _i2.GRepositoryVisibility get visibility;
   static Serializer<GCreateRepositoryInput> get serializer =>
       _$gCreateRepositoryInputSerializer;
   Map<String, dynamic> toJson() =>
@@ -1618,7 +1620,7 @@ abstract class GCreateSponsorshipInput
   int? get amount;
   String? get clientMutationId;
   bool? get isRecurring;
-  GSponsorshipPrivacy? get privacyLevel;
+  _i2.GSponsorshipPrivacy? get privacyLevel;
   bool? get receiveEmails;
   String? get sponsorId;
   String? get sponsorLogin;
@@ -1689,7 +1691,7 @@ abstract class GDate implements Built<GDate, GDateBuilder> {
 
   String get value;
   @BuiltValueSerializer(custom: true)
-  static Serializer<GDate> get serializer => _i2.DefaultScalarSerializer<GDate>(
+  static Serializer<GDate> get serializer => _i3.DefaultScalarSerializer<GDate>(
       (Object serialized) => GDate((serialized as String?)));
 }
 
@@ -1702,7 +1704,7 @@ abstract class GDateTime implements Built<GDateTime, GDateTimeBuilder> {
   String get value;
   @BuiltValueSerializer(custom: true)
   static Serializer<GDateTime> get serializer =>
-      _i2.DefaultScalarSerializer<GDateTime>(
+      _i3.DefaultScalarSerializer<GDateTime>(
           (Object serialized) => GDateTime((serialized as String?)));
 }
 
@@ -1718,7 +1720,7 @@ abstract class GDeclineTopicSuggestionInput
 
   String? get clientMutationId;
   String get name;
-  GTopicSuggestionDeclineReason get reason;
+  _i2.GTopicSuggestionDeclineReason get reason;
   String get repositoryId;
   static Serializer<GDeclineTopicSuggestionInput> get serializer =>
       _$gDeclineTopicSuggestionInputSerializer;
@@ -2163,8 +2165,8 @@ abstract class GDeploymentOrder
   factory GDeploymentOrder([Function(GDeploymentOrderBuilder b) updates]) =
       _$GDeploymentOrder;
 
-  GOrderDirection get direction;
-  GDeploymentOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GDeploymentOrderField get field;
   static Serializer<GDeploymentOrder> get serializer =>
       _$gDeploymentOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -2323,8 +2325,8 @@ abstract class GDiscussionOrder
   factory GDiscussionOrder([Function(GDiscussionOrderBuilder b) updates]) =
       _$GDiscussionOrder;
 
-  GOrderDirection get direction;
-  GDiscussionOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GDiscussionOrderField get field;
   static Serializer<GDiscussionOrder> get serializer =>
       _$gDiscussionOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -2403,7 +2405,7 @@ abstract class GDismissRepositoryVulnerabilityAlertInput
           updates]) = _$GDismissRepositoryVulnerabilityAlertInput;
 
   String? get clientMutationId;
-  GDismissReason get dismissReason;
+  _i2.GDismissReason get dismissReason;
   String get repositoryVulnerabilityAlertId;
   static Serializer<GDismissRepositoryVulnerabilityAlertInput> get serializer =>
       _$gDismissRepositoryVulnerabilityAlertInputSerializer;
@@ -2451,9 +2453,9 @@ abstract class GDraftPullRequestReviewThread
   String get body;
   int get line;
   String get path;
-  GDiffSide? get side;
+  _i2.GDiffSide? get side;
   int? get startLine;
-  GDiffSide? get startSide;
+  _i2.GDiffSide? get startSide;
   static Serializer<GDraftPullRequestReviewThread> get serializer =>
       _$gDraftPullRequestReviewThreadSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -2477,7 +2479,7 @@ abstract class GEnablePullRequestAutoMergeInput
   String? get clientMutationId;
   String? get commitBody;
   String? get commitHeadline;
-  GPullRequestMergeMethod? get mergeMethod;
+  _i2.GPullRequestMergeMethod? get mergeMethod;
   String get pullRequestId;
   static Serializer<GEnablePullRequestAutoMergeInput> get serializer =>
       _$gEnablePullRequestAutoMergeInputSerializer;
@@ -2500,8 +2502,8 @@ abstract class GEnterpriseAdministratorInvitationOrder
       [Function(GEnterpriseAdministratorInvitationOrderBuilder b)
           updates]) = _$GEnterpriseAdministratorInvitationOrder;
 
-  GOrderDirection get direction;
-  GEnterpriseAdministratorInvitationOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GEnterpriseAdministratorInvitationOrderField get field;
   static Serializer<GEnterpriseAdministratorInvitationOrder> get serializer =>
       _$gEnterpriseAdministratorInvitationOrderSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -2620,8 +2622,8 @@ abstract class GEnterpriseMemberOrder
           [Function(GEnterpriseMemberOrderBuilder b) updates]) =
       _$GEnterpriseMemberOrder;
 
-  GOrderDirection get direction;
-  GEnterpriseMemberOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GEnterpriseMemberOrderField get field;
   static Serializer<GEnterpriseMemberOrder> get serializer =>
       _$gEnterpriseMemberOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -2706,8 +2708,8 @@ abstract class GEnterpriseServerInstallationOrder
           [Function(GEnterpriseServerInstallationOrderBuilder b) updates]) =
       _$GEnterpriseServerInstallationOrder;
 
-  GOrderDirection get direction;
-  GEnterpriseServerInstallationOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GEnterpriseServerInstallationOrderField get field;
   static Serializer<GEnterpriseServerInstallationOrder> get serializer =>
       _$gEnterpriseServerInstallationOrderSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers
@@ -2749,8 +2751,8 @@ abstract class GEnterpriseServerUserAccountEmailOrder
           [Function(GEnterpriseServerUserAccountEmailOrderBuilder b) updates]) =
       _$GEnterpriseServerUserAccountEmailOrder;
 
-  GOrderDirection get direction;
-  GEnterpriseServerUserAccountEmailOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GEnterpriseServerUserAccountEmailOrderField get field;
   static Serializer<GEnterpriseServerUserAccountEmailOrder> get serializer =>
       _$gEnterpriseServerUserAccountEmailOrderSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -2787,8 +2789,8 @@ abstract class GEnterpriseServerUserAccountOrder
           [Function(GEnterpriseServerUserAccountOrderBuilder b) updates]) =
       _$GEnterpriseServerUserAccountOrder;
 
-  GOrderDirection get direction;
-  GEnterpriseServerUserAccountOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GEnterpriseServerUserAccountOrderField get field;
   static Serializer<GEnterpriseServerUserAccountOrder> get serializer =>
       _$gEnterpriseServerUserAccountOrderSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers
@@ -2827,8 +2829,8 @@ abstract class GEnterpriseServerUserAccountsUploadOrder
       [Function(GEnterpriseServerUserAccountsUploadOrderBuilder b)
           updates]) = _$GEnterpriseServerUserAccountsUploadOrder;
 
-  GOrderDirection get direction;
-  GEnterpriseServerUserAccountsUploadOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GEnterpriseServerUserAccountsUploadOrderField get field;
   static Serializer<GEnterpriseServerUserAccountsUploadOrder> get serializer =>
       _$gEnterpriseServerUserAccountsUploadOrderSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -2919,7 +2921,7 @@ abstract class GFileAddition
   factory GFileAddition([Function(GFileAdditionBuilder b) updates]) =
       _$GFileAddition;
 
-  GBase64String get contents;
+  _i2.GBase64String get contents;
   String get path;
   static Serializer<GFileAddition> get serializer => _$gFileAdditionSerializer;
   Map<String, dynamic> toJson() =>
@@ -2936,8 +2938,8 @@ abstract class GFileChanges
   factory GFileChanges([Function(GFileChangesBuilder b) updates]) =
       _$GFileChanges;
 
-  BuiltList<GFileAddition>? get additions;
-  BuiltList<GFileDeletion>? get deletions;
+  BuiltList<_i2.GFileAddition>? get additions;
+  BuiltList<_i2.GFileDeletion>? get deletions;
   static Serializer<GFileChanges> get serializer => _$gFileChangesSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GFileChanges.serializer, this)
@@ -3033,8 +3035,8 @@ abstract class GGistOrder implements Built<GGistOrder, GGistOrderBuilder> {
 
   factory GGistOrder([Function(GGistOrderBuilder b) updates]) = _$GGistOrder;
 
-  GOrderDirection get direction;
-  GGistOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GGistOrderField get field;
   static Serializer<GGistOrder> get serializer => _$gGistOrderSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GGistOrder.serializer, this)
@@ -3082,7 +3084,7 @@ abstract class GGitObjectID
   String get value;
   @BuiltValueSerializer(custom: true)
   static Serializer<GGitObjectID> get serializer =>
-      _i2.DefaultScalarSerializer<GGitObjectID>(
+      _i3.DefaultScalarSerializer<GGitObjectID>(
           (Object serialized) => GGitObjectID((serialized as String?)));
 }
 
@@ -3095,7 +3097,7 @@ abstract class GGitRefname implements Built<GGitRefname, GGitRefnameBuilder> {
   String get value;
   @BuiltValueSerializer(custom: true)
   static Serializer<GGitRefname> get serializer =>
-      _i2.DefaultScalarSerializer<GGitRefname>(
+      _i3.DefaultScalarSerializer<GGitRefname>(
           (Object serialized) => GGitRefname((serialized as String?)));
 }
 
@@ -3109,7 +3111,7 @@ abstract class GGitSSHRemote
   String get value;
   @BuiltValueSerializer(custom: true)
   static Serializer<GGitSSHRemote> get serializer =>
-      _i2.DefaultScalarSerializer<GGitSSHRemote>(
+      _i3.DefaultScalarSerializer<GGitSSHRemote>(
           (Object serialized) => GGitSSHRemote((serialized as String?)));
 }
 
@@ -3175,7 +3177,7 @@ abstract class GGitTimestamp
   String get value;
   @BuiltValueSerializer(custom: true)
   static Serializer<GGitTimestamp> get serializer =>
-      _i2.DefaultScalarSerializer<GGitTimestamp>(
+      _i3.DefaultScalarSerializer<GGitTimestamp>(
           (Object serialized) => GGitTimestamp((serialized as String?)));
 }
 
@@ -3187,7 +3189,7 @@ abstract class GHTML implements Built<GHTML, GHTMLBuilder> {
 
   String get value;
   @BuiltValueSerializer(custom: true)
-  static Serializer<GHTML> get serializer => _i2.DefaultScalarSerializer<GHTML>(
+  static Serializer<GHTML> get serializer => _i3.DefaultScalarSerializer<GHTML>(
       (Object serialized) => GHTML((serialized as String?)));
 }
 
@@ -3220,7 +3222,7 @@ abstract class GImportProjectInput
 
   String? get body;
   String? get clientMutationId;
-  BuiltList<GProjectColumnImport> get columnImports;
+  BuiltList<_i2.GProjectColumnImport> get columnImports;
   String get name;
   String get ownerName;
   bool? get public;
@@ -3246,7 +3248,7 @@ abstract class GInviteEnterpriseAdminInput
   String? get email;
   String get enterpriseId;
   String? get invitee;
-  GEnterpriseAdministratorRole? get role;
+  _i2.GEnterpriseAdministratorRole? get role;
   static Serializer<GInviteEnterpriseAdminInput> get serializer =>
       _$gInviteEnterpriseAdminInputSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -3281,8 +3283,8 @@ abstract class GIpAllowListEntryOrder
           [Function(GIpAllowListEntryOrderBuilder b) updates]) =
       _$GIpAllowListEntryOrder;
 
-  GOrderDirection get direction;
-  GIpAllowListEntryOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GIpAllowListEntryOrderField get field;
   static Serializer<GIpAllowListEntryOrder> get serializer =>
       _$gIpAllowListEntryOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -3335,8 +3337,8 @@ abstract class GIssueCommentOrder
   factory GIssueCommentOrder([Function(GIssueCommentOrderBuilder b) updates]) =
       _$GIssueCommentOrder;
 
-  GOrderDirection get direction;
-  GIssueCommentOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GIssueCommentOrderField get field;
   static Serializer<GIssueCommentOrder> get serializer =>
       _$gIssueCommentOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -3372,8 +3374,8 @@ abstract class GIssueFilters
   BuiltList<String>? get labels;
   String? get mentioned;
   String? get milestone;
-  GDateTime? get since;
-  BuiltList<GIssueState>? get states;
+  _i2.GDateTime? get since;
+  BuiltList<_i2.GIssueState>? get states;
   bool? get viewerSubscribed;
   static Serializer<GIssueFilters> get serializer => _$gIssueFiltersSerializer;
   Map<String, dynamic> toJson() =>
@@ -3388,8 +3390,8 @@ abstract class GIssueOrder implements Built<GIssueOrder, GIssueOrderBuilder> {
 
   factory GIssueOrder([Function(GIssueOrderBuilder b) updates]) = _$GIssueOrder;
 
-  GOrderDirection get direction;
-  GIssueOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GIssueOrderField get field;
   static Serializer<GIssueOrder> get serializer => _$gIssueOrderSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GIssueOrder.serializer, this)
@@ -3532,8 +3534,8 @@ abstract class GLabelOrder implements Built<GLabelOrder, GLabelOrderBuilder> {
 
   factory GLabelOrder([Function(GLabelOrderBuilder b) updates]) = _$GLabelOrder;
 
-  GOrderDirection get direction;
-  GLabelOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GLabelOrderField get field;
   static Serializer<GLabelOrder> get serializer => _$gLabelOrderSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GLabelOrder.serializer, this)
@@ -3563,8 +3565,8 @@ abstract class GLanguageOrder
   factory GLanguageOrder([Function(GLanguageOrderBuilder b) updates]) =
       _$GLanguageOrder;
 
-  GOrderDirection get direction;
-  GLanguageOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GLanguageOrderField get field;
   static Serializer<GLanguageOrder> get serializer =>
       _$gLanguageOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -3617,7 +3619,7 @@ abstract class GLockLockableInput
       _$GLockLockableInput;
 
   String? get clientMutationId;
-  GLockReason? get lockReason;
+  _i2.GLockReason? get lockReason;
   String get lockableId;
   static Serializer<GLockLockableInput> get serializer =>
       _$gLockLockableInputSerializer;
@@ -3744,8 +3746,8 @@ abstract class GMergePullRequestInput
   String? get clientMutationId;
   String? get commitBody;
   String? get commitHeadline;
-  GGitObjectID? get expectedHeadOid;
-  GPullRequestMergeMethod? get mergeMethod;
+  _i2.GGitObjectID? get expectedHeadOid;
+  _i2.GPullRequestMergeMethod? get mergeMethod;
   String get pullRequestId;
   static Serializer<GMergePullRequestInput> get serializer =>
       _$gMergePullRequestInputSerializer;
@@ -3804,8 +3806,8 @@ abstract class GMilestoneOrder
   factory GMilestoneOrder([Function(GMilestoneOrderBuilder b) updates]) =
       _$GMilestoneOrder;
 
-  GOrderDirection get direction;
-  GMilestoneOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GMilestoneOrderField get field;
   static Serializer<GMilestoneOrder> get serializer =>
       _$gMilestoneOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -3857,7 +3859,7 @@ abstract class GMinimizeCommentInput
           [Function(GMinimizeCommentInputBuilder b) updates]) =
       _$GMinimizeCommentInput;
 
-  GReportedContentClassifiers get classifier;
+  _i2.GReportedContentClassifiers get classifier;
   String? get clientMutationId;
   String get subjectId;
   static Serializer<GMinimizeCommentInput> get serializer =>
@@ -4349,8 +4351,8 @@ abstract class GOrganizationOrder
   factory GOrganizationOrder([Function(GOrganizationOrderBuilder b) updates]) =
       _$GOrganizationOrder;
 
-  GOrderDirection get direction;
-  GOrganizationOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GOrganizationOrderField get field;
   static Serializer<GOrganizationOrder> get serializer =>
       _$gOrganizationOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -4383,8 +4385,8 @@ abstract class GPackageFileOrder
   factory GPackageFileOrder([Function(GPackageFileOrderBuilder b) updates]) =
       _$GPackageFileOrder;
 
-  GOrderDirection? get direction;
-  GPackageFileOrderField? get field;
+  _i2.GOrderDirection? get direction;
+  _i2.GPackageFileOrderField? get field;
   static Serializer<GPackageFileOrder> get serializer =>
       _$gPackageFileOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -4415,8 +4417,8 @@ abstract class GPackageOrder
   factory GPackageOrder([Function(GPackageOrderBuilder b) updates]) =
       _$GPackageOrder;
 
-  GOrderDirection? get direction;
-  GPackageOrderField? get field;
+  _i2.GOrderDirection? get direction;
+  _i2.GPackageOrderField? get field;
   static Serializer<GPackageOrder> get serializer => _$gPackageOrderSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GPackageOrder.serializer, this)
@@ -4467,8 +4469,8 @@ abstract class GPackageVersionOrder
           [Function(GPackageVersionOrderBuilder b) updates]) =
       _$GPackageVersionOrder;
 
-  GOrderDirection? get direction;
-  GPackageVersionOrderField? get field;
+  _i2.GOrderDirection? get direction;
+  _i2.GPackageVersionOrderField? get field;
   static Serializer<GPackageVersionOrder> get serializer =>
       _$gPackageVersionOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -4598,7 +4600,7 @@ abstract class GPreciseDateTime
   String get value;
   @BuiltValueSerializer(custom: true)
   static Serializer<GPreciseDateTime> get serializer =>
-      _i2.DefaultScalarSerializer<GPreciseDateTime>(
+      _i3.DefaultScalarSerializer<GPreciseDateTime>(
           (Object serialized) => GPreciseDateTime((serialized as String?)));
 }
 
@@ -4662,7 +4664,7 @@ abstract class GProjectColumnImport
       _$GProjectColumnImport;
 
   String get columnName;
-  BuiltList<GProjectCardImport>? get issues;
+  BuiltList<_i2.GProjectCardImport>? get issues;
   int get position;
   static Serializer<GProjectColumnImport> get serializer =>
       _$gProjectColumnImportSerializer;
@@ -4698,8 +4700,8 @@ abstract class GProjectOrder
   factory GProjectOrder([Function(GProjectOrderBuilder b) updates]) =
       _$GProjectOrder;
 
-  GOrderDirection get direction;
-  GProjectOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GProjectOrderField get field;
   static Serializer<GProjectOrder> get serializer => _$gProjectOrderSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GProjectOrder.serializer, this)
@@ -4780,8 +4782,8 @@ abstract class GPullRequestOrder
   factory GPullRequestOrder([Function(GPullRequestOrderBuilder b) updates]) =
       _$GPullRequestOrder;
 
-  GOrderDirection get direction;
-  GPullRequestOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GPullRequestOrderField get field;
   static Serializer<GPullRequestOrder> get serializer =>
       _$gPullRequestOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -5139,8 +5141,8 @@ abstract class GReactionOrder
   factory GReactionOrder([Function(GReactionOrderBuilder b) updates]) =
       _$GReactionOrder;
 
-  GOrderDirection get direction;
-  GReactionOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GReactionOrderField get field;
   static Serializer<GReactionOrder> get serializer =>
       _$gReactionOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -5168,8 +5170,8 @@ abstract class GRefOrder implements Built<GRefOrder, GRefOrderBuilder> {
 
   factory GRefOrder([Function(GRefOrderBuilder b) updates]) = _$GRefOrder;
 
-  GOrderDirection get direction;
-  GRefOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GRefOrderField get field;
   static Serializer<GRefOrder> get serializer => _$gRefOrderSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GRefOrder.serializer, this)
@@ -5196,10 +5198,10 @@ abstract class GRefUpdate implements Built<GRefUpdate, GRefUpdateBuilder> {
 
   factory GRefUpdate([Function(GRefUpdateBuilder b) updates]) = _$GRefUpdate;
 
-  GGitObjectID get afterOid;
-  GGitObjectID? get beforeOid;
+  _i2.GGitObjectID get afterOid;
+  _i2.GGitObjectID? get beforeOid;
   bool? get force;
-  GGitRefname get name;
+  _i2.GGitRefname get name;
   static Serializer<GRefUpdate> get serializer => _$gRefUpdateSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GRefUpdate.serializer, this)
@@ -5285,8 +5287,8 @@ abstract class GReleaseOrder
   factory GReleaseOrder([Function(GReleaseOrderBuilder b) updates]) =
       _$GReleaseOrder;
 
-  GOrderDirection get direction;
-  GReleaseOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GReleaseOrderField get field;
   static Serializer<GReleaseOrder> get serializer => _$gReleaseOrderSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GReleaseOrder.serializer, this)
@@ -5480,7 +5482,7 @@ abstract class GRemoveReactionInput
       _$GRemoveReactionInput;
 
   String? get clientMutationId;
-  GReactionContent get content;
+  _i2.GReactionContent get content;
   String get subjectId;
   static Serializer<GRemoveReactionInput> get serializer =>
       _$gRemoveReactionInputSerializer;
@@ -5856,8 +5858,8 @@ abstract class GRepositoryInvitationOrder
           [Function(GRepositoryInvitationOrderBuilder b) updates]) =
       _$GRepositoryInvitationOrder;
 
-  GOrderDirection get direction;
-  GRepositoryInvitationOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GRepositoryInvitationOrderField get field;
   static Serializer<GRepositoryInvitationOrder> get serializer =>
       _$gRepositoryInvitationOrderSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -5911,8 +5913,8 @@ abstract class GRepositoryOrder
   factory GRepositoryOrder([Function(GRepositoryOrderBuilder b) updates]) =
       _$GRepositoryOrder;
 
-  GOrderDirection get direction;
-  GRepositoryOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GRepositoryOrderField get field;
   static Serializer<GRepositoryOrder> get serializer =>
       _$gRepositoryOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -6160,8 +6162,8 @@ abstract class GSavedReplyOrder
   factory GSavedReplyOrder([Function(GSavedReplyOrderBuilder b) updates]) =
       _$GSavedReplyOrder;
 
-  GOrderDirection get direction;
-  GSavedReplyOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GSavedReplyOrderField get field;
   static Serializer<GSavedReplyOrder> get serializer =>
       _$gSavedReplyOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -6243,7 +6245,7 @@ abstract class GSecurityAdvisoryIdentifierFilter
           [Function(GSecurityAdvisoryIdentifierFilterBuilder b) updates]) =
       _$GSecurityAdvisoryIdentifierFilter;
 
-  GSecurityAdvisoryIdentifierType get type;
+  _i2.GSecurityAdvisoryIdentifierType get type;
   String get value;
   static Serializer<GSecurityAdvisoryIdentifierFilter> get serializer =>
       _$gSecurityAdvisoryIdentifierFilterSerializer;
@@ -6281,8 +6283,8 @@ abstract class GSecurityAdvisoryOrder
           [Function(GSecurityAdvisoryOrderBuilder b) updates]) =
       _$GSecurityAdvisoryOrder;
 
-  GOrderDirection get direction;
-  GSecurityAdvisoryOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GSecurityAdvisoryOrderField get field;
   static Serializer<GSecurityAdvisoryOrder> get serializer =>
       _$gSecurityAdvisoryOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -6339,8 +6341,8 @@ abstract class GSecurityVulnerabilityOrder
           [Function(GSecurityVulnerabilityOrderBuilder b) updates]) =
       _$GSecurityVulnerabilityOrder;
 
-  GOrderDirection get direction;
-  GSecurityVulnerabilityOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GSecurityVulnerabilityOrderField get field;
   static Serializer<GSecurityVulnerabilityOrder> get serializer =>
       _$gSecurityVulnerabilityOrderSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -6375,12 +6377,12 @@ abstract class GSetEnterpriseIdentityProviderInput
       _$GSetEnterpriseIdentityProviderInput;
 
   String? get clientMutationId;
-  GSamlDigestAlgorithm get digestMethod;
+  _i2.GSamlDigestAlgorithm get digestMethod;
   String get enterpriseId;
   String get idpCertificate;
   String? get issuer;
-  GSamlSignatureAlgorithm get signatureMethod;
-  GURI get ssoUrl;
+  _i2.GSamlSignatureAlgorithm get signatureMethod;
+  _i2.GURI get ssoUrl;
   static Serializer<GSetEnterpriseIdentityProviderInput> get serializer =>
       _$gSetEnterpriseIdentityProviderInputSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers
@@ -6403,8 +6405,8 @@ abstract class GSetOrganizationInteractionLimitInput
       _$GSetOrganizationInteractionLimitInput;
 
   String? get clientMutationId;
-  GRepositoryInteractionLimitExpiry? get expiry;
-  GRepositoryInteractionLimit get limit;
+  _i2.GRepositoryInteractionLimitExpiry? get expiry;
+  _i2.GRepositoryInteractionLimit get limit;
   String get organizationId;
   static Serializer<GSetOrganizationInteractionLimitInput> get serializer =>
       _$gSetOrganizationInteractionLimitInputSerializer;
@@ -6428,8 +6430,8 @@ abstract class GSetRepositoryInteractionLimitInput
       _$GSetRepositoryInteractionLimitInput;
 
   String? get clientMutationId;
-  GRepositoryInteractionLimitExpiry? get expiry;
-  GRepositoryInteractionLimit get limit;
+  _i2.GRepositoryInteractionLimitExpiry? get expiry;
+  _i2.GRepositoryInteractionLimit get limit;
   String get repositoryId;
   static Serializer<GSetRepositoryInteractionLimitInput> get serializer =>
       _$gSetRepositoryInteractionLimitInputSerializer;
@@ -6453,8 +6455,8 @@ abstract class GSetUserInteractionLimitInput
       _$GSetUserInteractionLimitInput;
 
   String? get clientMutationId;
-  GRepositoryInteractionLimitExpiry? get expiry;
-  GRepositoryInteractionLimit get limit;
+  _i2.GRepositoryInteractionLimitExpiry? get expiry;
+  _i2.GRepositoryInteractionLimit get limit;
   String get userId;
   static Serializer<GSetUserInteractionLimitInput> get serializer =>
       _$gSetUserInteractionLimitInputSerializer;
@@ -6472,8 +6474,8 @@ abstract class GSponsorOrder
   factory GSponsorOrder([Function(GSponsorOrderBuilder b) updates]) =
       _$GSponsorOrder;
 
-  GOrderDirection get direction;
-  GSponsorOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GSponsorOrderField get field;
   static Serializer<GSponsorOrder> get serializer => _$gSponsorOrderSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GSponsorOrder.serializer, this)
@@ -6503,8 +6505,8 @@ abstract class GSponsorableOrder
   factory GSponsorableOrder([Function(GSponsorableOrderBuilder b) updates]) =
       _$GSponsorableOrder;
 
-  GOrderDirection get direction;
-  GSponsorableOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GSponsorableOrderField get field;
   static Serializer<GSponsorableOrder> get serializer =>
       _$gSponsorableOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -6563,8 +6565,8 @@ abstract class GSponsorsActivityOrder
           [Function(GSponsorsActivityOrderBuilder b) updates]) =
       _$GSponsorsActivityOrder;
 
-  GOrderDirection get direction;
-  GSponsorsActivityOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GSponsorsActivityOrderField get field;
   static Serializer<GSponsorsActivityOrder> get serializer =>
       _$gSponsorsActivityOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -6630,8 +6632,8 @@ abstract class GSponsorsTierOrder
   factory GSponsorsTierOrder([Function(GSponsorsTierOrderBuilder b) updates]) =
       _$GSponsorsTierOrder;
 
-  GOrderDirection get direction;
-  GSponsorsTierOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GSponsorsTierOrderField get field;
   static Serializer<GSponsorsTierOrder> get serializer =>
       _$gSponsorsTierOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -6667,8 +6669,8 @@ abstract class GSponsorshipNewsletterOrder
           [Function(GSponsorshipNewsletterOrderBuilder b) updates]) =
       _$GSponsorshipNewsletterOrder;
 
-  GOrderDirection get direction;
-  GSponsorshipNewsletterOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GSponsorshipNewsletterOrderField get field;
   static Serializer<GSponsorshipNewsletterOrder> get serializer =>
       _$gSponsorshipNewsletterOrderSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -6699,8 +6701,8 @@ abstract class GSponsorshipOrder
   factory GSponsorshipOrder([Function(GSponsorshipOrderBuilder b) updates]) =
       _$GSponsorshipOrder;
 
-  GOrderDirection get direction;
-  GSponsorshipOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GSponsorshipOrderField get field;
   static Serializer<GSponsorshipOrder> get serializer =>
       _$gSponsorshipOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -6744,8 +6746,8 @@ abstract class GStarOrder implements Built<GStarOrder, GStarOrderBuilder> {
 
   factory GStarOrder([Function(GStarOrderBuilder b) updates]) = _$GStarOrder;
 
-  GOrderDirection get direction;
-  GStarOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GStarOrderField get field;
   static Serializer<GStarOrder> get serializer => _$gStarOrderSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GStarOrder.serializer, this)
@@ -6795,7 +6797,7 @@ abstract class GSubmitPullRequestReviewInput
 
   String? get body;
   String? get clientMutationId;
-  GPullRequestReviewEvent get event;
+  _i2.GPullRequestReviewEvent get event;
   String? get pullRequestId;
   String? get pullRequestReviewId;
   static Serializer<GSubmitPullRequestReviewInput> get serializer =>
@@ -6833,8 +6835,8 @@ abstract class GTeamDiscussionCommentOrder
           [Function(GTeamDiscussionCommentOrderBuilder b) updates]) =
       _$GTeamDiscussionCommentOrder;
 
-  GOrderDirection get direction;
-  GTeamDiscussionCommentOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GTeamDiscussionCommentOrderField get field;
   static Serializer<GTeamDiscussionCommentOrder> get serializer =>
       _$gTeamDiscussionCommentOrderSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -6866,8 +6868,8 @@ abstract class GTeamDiscussionOrder
           [Function(GTeamDiscussionOrderBuilder b) updates]) =
       _$GTeamDiscussionOrder;
 
-  GOrderDirection get direction;
-  GTeamDiscussionOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GTeamDiscussionOrderField get field;
   static Serializer<GTeamDiscussionOrder> get serializer =>
       _$gTeamDiscussionOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -6898,8 +6900,8 @@ abstract class GTeamMemberOrder
   factory GTeamMemberOrder([Function(GTeamMemberOrderBuilder b) updates]) =
       _$GTeamMemberOrder;
 
-  GOrderDirection get direction;
-  GTeamMemberOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GTeamMemberOrderField get field;
   static Serializer<GTeamMemberOrder> get serializer =>
       _$gTeamMemberOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -6960,8 +6962,8 @@ abstract class GTeamOrder implements Built<GTeamOrder, GTeamOrderBuilder> {
 
   factory GTeamOrder([Function(GTeamOrderBuilder b) updates]) = _$GTeamOrder;
 
-  GOrderDirection get direction;
-  GTeamOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GTeamOrderField get field;
   static Serializer<GTeamOrder> get serializer => _$gTeamOrderSerializer;
   Map<String, dynamic> toJson() =>
       (_i1.serializers.serializeWith(GTeamOrder.serializer, this)
@@ -7001,8 +7003,8 @@ abstract class GTeamRepositoryOrder
           [Function(GTeamRepositoryOrderBuilder b) updates]) =
       _$GTeamRepositoryOrder;
 
-  GOrderDirection get direction;
-  GTeamRepositoryOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GTeamRepositoryOrderField get field;
   static Serializer<GTeamRepositoryOrder> get serializer =>
       _$gTeamRepositoryOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -7119,7 +7121,7 @@ abstract class GURI implements Built<GURI, GURIBuilder> {
 
   String get value;
   @BuiltValueSerializer(custom: true)
-  static Serializer<GURI> get serializer => _i2.DefaultScalarSerializer<GURI>(
+  static Serializer<GURI> get serializer => _i3.DefaultScalarSerializer<GURI>(
       (Object serialized) => GURI((serialized as String?)));
 }
 
@@ -7349,7 +7351,7 @@ abstract class GUpdateBranchProtectionRuleInput
   BuiltList<String>? get pushActorIds;
   int? get requiredApprovingReviewCount;
   BuiltList<String>? get requiredStatusCheckContexts;
-  BuiltList<GRequiredStatusCheckInput>? get requiredStatusChecks;
+  BuiltList<_i2.GRequiredStatusCheckInput>? get requiredStatusChecks;
   bool? get requiresApprovingReviews;
   bool? get requiresCodeOwnerReviews;
   bool? get requiresCommitSignatures;
@@ -7379,18 +7381,18 @@ abstract class GUpdateCheckRunInput
           [Function(GUpdateCheckRunInputBuilder b) updates]) =
       _$GUpdateCheckRunInput;
 
-  BuiltList<GCheckRunAction>? get actions;
+  BuiltList<_i2.GCheckRunAction>? get actions;
   String get checkRunId;
   String? get clientMutationId;
-  GDateTime? get completedAt;
-  GCheckConclusionState? get conclusion;
-  GURI? get detailsUrl;
+  _i2.GDateTime? get completedAt;
+  _i2.GCheckConclusionState? get conclusion;
+  _i2.GURI? get detailsUrl;
   String? get externalId;
   String? get name;
-  GCheckRunOutput? get output;
+  _i2.GCheckRunOutput? get output;
   String get repositoryId;
-  GDateTime? get startedAt;
-  GRequestableCheckStatusState? get status;
+  _i2.GDateTime? get startedAt;
+  _i2.GRequestableCheckStatusState? get status;
   static Serializer<GUpdateCheckRunInput> get serializer =>
       _$gUpdateCheckRunInputSerializer;
   Map<String, dynamic> toJson() =>
@@ -7410,7 +7412,7 @@ abstract class GUpdateCheckSuitePreferencesInput
           [Function(GUpdateCheckSuitePreferencesInputBuilder b) updates]) =
       _$GUpdateCheckSuitePreferencesInput;
 
-  BuiltList<GCheckSuiteAutoTriggerPreference> get autoTriggerPreferences;
+  BuiltList<_i2.GCheckSuiteAutoTriggerPreference> get autoTriggerPreferences;
   String? get clientMutationId;
   String get repositoryId;
   static Serializer<GUpdateCheckSuitePreferencesInput> get serializer =>
@@ -7481,7 +7483,7 @@ abstract class GUpdateEnterpriseAdministratorRoleInput
   String? get clientMutationId;
   String get enterpriseId;
   String get login;
-  GEnterpriseAdministratorRole get role;
+  _i2.GEnterpriseAdministratorRole get role;
   static Serializer<GUpdateEnterpriseAdministratorRoleInput> get serializer =>
       _$gUpdateEnterpriseAdministratorRoleInputSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -7507,7 +7509,7 @@ abstract class GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseEnabledDisabledSettingValue get settingValue;
+  _i2.GEnterpriseEnabledDisabledSettingValue get settingValue;
   static Serializer<GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput>
       get serializer =>
           _$gUpdateEnterpriseAllowPrivateRepositoryForkingSettingInputSerializer;
@@ -7534,7 +7536,7 @@ abstract class GUpdateEnterpriseDefaultRepositoryPermissionSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseDefaultRepositoryPermissionSettingValue get settingValue;
+  _i2.GEnterpriseDefaultRepositoryPermissionSettingValue get settingValue;
   static Serializer<GUpdateEnterpriseDefaultRepositoryPermissionSettingInput>
       get serializer =>
           _$gUpdateEnterpriseDefaultRepositoryPermissionSettingInputSerializer;
@@ -7563,7 +7565,7 @@ abstract class GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseEnabledDisabledSettingValue get settingValue;
+  _i2.GEnterpriseEnabledDisabledSettingValue get settingValue;
   static Serializer<
           GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput>
       get serializer =>
@@ -7597,7 +7599,7 @@ abstract class GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput
   bool? get membersCanCreatePrivateRepositories;
   bool? get membersCanCreatePublicRepositories;
   bool? get membersCanCreateRepositoriesPolicyEnabled;
-  GEnterpriseMembersCanCreateRepositoriesSettingValue? get settingValue;
+  _i2.GEnterpriseMembersCanCreateRepositoriesSettingValue? get settingValue;
   static Serializer<GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanCreateRepositoriesSettingInputSerializer;
@@ -7623,7 +7625,7 @@ abstract class GUpdateEnterpriseMembersCanDeleteIssuesSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseEnabledDisabledSettingValue get settingValue;
+  _i2.GEnterpriseEnabledDisabledSettingValue get settingValue;
   static Serializer<GUpdateEnterpriseMembersCanDeleteIssuesSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanDeleteIssuesSettingInputSerializer;
@@ -7650,7 +7652,7 @@ abstract class GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseEnabledDisabledSettingValue get settingValue;
+  _i2.GEnterpriseEnabledDisabledSettingValue get settingValue;
   static Serializer<GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanDeleteRepositoriesSettingInputSerializer;
@@ -7678,7 +7680,7 @@ abstract class GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseEnabledDisabledSettingValue get settingValue;
+  _i2.GEnterpriseEnabledDisabledSettingValue get settingValue;
   static Serializer<GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanInviteCollaboratorsSettingInputSerializer;
@@ -7704,7 +7706,7 @@ abstract class GUpdateEnterpriseMembersCanMakePurchasesSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseMembersCanMakePurchasesSettingValue get settingValue;
+  _i2.GEnterpriseMembersCanMakePurchasesSettingValue get settingValue;
   static Serializer<GUpdateEnterpriseMembersCanMakePurchasesSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanMakePurchasesSettingInputSerializer;
@@ -7733,7 +7735,7 @@ abstract class GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseEnabledDisabledSettingValue get settingValue;
+  _i2.GEnterpriseEnabledDisabledSettingValue get settingValue;
   static Serializer<
           GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput>
       get serializer =>
@@ -7763,7 +7765,7 @@ abstract class GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseEnabledDisabledSettingValue get settingValue;
+  _i2.GEnterpriseEnabledDisabledSettingValue get settingValue;
   static Serializer<
           GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput>
       get serializer =>
@@ -7790,7 +7792,7 @@ abstract class GUpdateEnterpriseOrganizationProjectsSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseEnabledDisabledSettingValue get settingValue;
+  _i2.GEnterpriseEnabledDisabledSettingValue get settingValue;
   static Serializer<GUpdateEnterpriseOrganizationProjectsSettingInput>
       get serializer =>
           _$gUpdateEnterpriseOrganizationProjectsSettingInputSerializer;
@@ -7840,7 +7842,7 @@ abstract class GUpdateEnterpriseRepositoryProjectsSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseEnabledDisabledSettingValue get settingValue;
+  _i2.GEnterpriseEnabledDisabledSettingValue get settingValue;
   static Serializer<GUpdateEnterpriseRepositoryProjectsSettingInput>
       get serializer =>
           _$gUpdateEnterpriseRepositoryProjectsSettingInputSerializer;
@@ -7865,7 +7867,7 @@ abstract class GUpdateEnterpriseTeamDiscussionsSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseEnabledDisabledSettingValue get settingValue;
+  _i2.GEnterpriseEnabledDisabledSettingValue get settingValue;
   static Serializer<GUpdateEnterpriseTeamDiscussionsSettingInput>
       get serializer =>
           _$gUpdateEnterpriseTeamDiscussionsSettingInputSerializer;
@@ -7893,7 +7895,7 @@ abstract class GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInput
 
   String? get clientMutationId;
   String get enterpriseId;
-  GEnterpriseEnabledSettingValue get settingValue;
+  _i2.GEnterpriseEnabledSettingValue get settingValue;
   static Serializer<
           GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInput>
       get serializer =>
@@ -7942,7 +7944,7 @@ abstract class GUpdateIpAllowListEnabledSettingInput
 
   String? get clientMutationId;
   String get ownerId;
-  GIpAllowListEnabledSettingValue get settingValue;
+  _i2.GIpAllowListEnabledSettingValue get settingValue;
   static Serializer<GUpdateIpAllowListEnabledSettingInput> get serializer =>
       _$gUpdateIpAllowListEnabledSettingInputSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers
@@ -7990,7 +7992,7 @@ abstract class GUpdateIpAllowListForInstalledAppsEnabledSettingInput
 
   String? get clientMutationId;
   String get ownerId;
-  GIpAllowListForInstalledAppsEnabledSettingValue get settingValue;
+  _i2.GIpAllowListForInstalledAppsEnabledSettingValue get settingValue;
   static Serializer<GUpdateIpAllowListForInstalledAppsEnabledSettingInput>
       get serializer =>
           _$gUpdateIpAllowListForInstalledAppsEnabledSettingInputSerializer;
@@ -8040,7 +8042,7 @@ abstract class GUpdateIssueInput
   BuiltList<String>? get labelIds;
   String? get milestoneId;
   BuiltList<String>? get projectIds;
-  GIssueState? get state;
+  _i2.GIssueState? get state;
   String? get title;
   static Serializer<GUpdateIssueInput> get serializer =>
       _$gUpdateIssueInputSerializer;
@@ -8084,7 +8086,7 @@ abstract class GUpdateNotificationRestrictionSettingInput
 
   String? get clientMutationId;
   String get ownerId;
-  GNotificationRestrictionSettingValue get settingValue;
+  _i2.GNotificationRestrictionSettingValue get settingValue;
   static Serializer<GUpdateNotificationRestrictionSettingInput>
       get serializer => _$gUpdateNotificationRestrictionSettingInputSerializer;
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
@@ -8151,7 +8153,7 @@ abstract class GUpdateProjectInput
   String? get name;
   String get projectId;
   bool? get public;
-  GProjectState? get state;
+  _i2.GProjectState? get state;
   static Serializer<GUpdateProjectInput> get serializer =>
       _$gUpdateProjectInputSerializer;
   Map<String, dynamic> toJson() =>
@@ -8198,7 +8200,7 @@ abstract class GUpdatePullRequestBranchInput
       _$GUpdatePullRequestBranchInput;
 
   String? get clientMutationId;
-  GGitObjectID? get expectedHeadOid;
+  _i2.GGitObjectID? get expectedHeadOid;
   String get pullRequestId;
   static Serializer<GUpdatePullRequestBranchInput> get serializer =>
       _$gUpdatePullRequestBranchInputSerializer;
@@ -8226,7 +8228,7 @@ abstract class GUpdatePullRequestInput
   String? get milestoneId;
   BuiltList<String>? get projectIds;
   String get pullRequestId;
-  GPullRequestUpdateState? get state;
+  _i2.GPullRequestUpdateState? get state;
   String? get title;
   static Serializer<GUpdatePullRequestInput> get serializer =>
       _$gUpdatePullRequestInputSerializer;
@@ -8292,7 +8294,7 @@ abstract class GUpdateRefInput
 
   String? get clientMutationId;
   bool? get force;
-  GGitObjectID get oid;
+  _i2.GGitObjectID get oid;
   String get refId;
   static Serializer<GUpdateRefInput> get serializer =>
       _$gUpdateRefInputSerializer;
@@ -8311,7 +8313,7 @@ abstract class GUpdateRefsInput
       _$GUpdateRefsInput;
 
   String? get clientMutationId;
-  BuiltList<GRefUpdate> get refUpdates;
+  BuiltList<_i2.GRefUpdate> get refUpdates;
   String get repositoryId;
   static Serializer<GUpdateRefsInput> get serializer =>
       _$gUpdateRefsInputSerializer;
@@ -8335,7 +8337,7 @@ abstract class GUpdateRepositoryInput
   bool? get hasIssuesEnabled;
   bool? get hasProjectsEnabled;
   bool? get hasWikiEnabled;
-  GURI? get homepageUrl;
+  _i2.GURI? get homepageUrl;
   String? get name;
   String get repositoryId;
   bool? get template;
@@ -8359,7 +8361,7 @@ abstract class GUpdateSponsorshipPreferencesInput
       _$GUpdateSponsorshipPreferencesInput;
 
   String? get clientMutationId;
-  GSponsorshipPrivacy? get privacyLevel;
+  _i2.GSponsorshipPrivacy? get privacyLevel;
   bool? get receiveEmails;
   String? get sponsorId;
   String? get sponsorLogin;
@@ -8386,7 +8388,7 @@ abstract class GUpdateSubscriptionInput
       _$GUpdateSubscriptionInput;
 
   String? get clientMutationId;
-  GSubscriptionState get state;
+  _i2.GSubscriptionState get state;
   String get subscribableId;
   static Serializer<GUpdateSubscriptionInput> get serializer =>
       _$gUpdateSubscriptionInputSerializer;
@@ -8457,7 +8459,7 @@ abstract class GUpdateTeamReviewAssignmentInput
           [Function(GUpdateTeamReviewAssignmentInputBuilder b) updates]) =
       _$GUpdateTeamReviewAssignmentInput;
 
-  GTeamReviewAssignmentAlgorithm? get algorithm;
+  _i2.GTeamReviewAssignmentAlgorithm? get algorithm;
   String? get clientMutationId;
   bool get enabled;
   BuiltList<String>? get excludedTeamMemberIds;
@@ -8521,8 +8523,8 @@ abstract class GUserStatusOrder
   factory GUserStatusOrder([Function(GUserStatusOrderBuilder b) updates]) =
       _$GUserStatusOrder;
 
-  GOrderDirection get direction;
-  GUserStatusOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GUserStatusOrderField get field;
   static Serializer<GUserStatusOrder> get serializer =>
       _$gUserStatusOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -8554,8 +8556,8 @@ abstract class GVerifiableDomainOrder
           [Function(GVerifiableDomainOrderBuilder b) updates]) =
       _$GVerifiableDomainOrder;
 
-  GOrderDirection get direction;
-  GVerifiableDomainOrderField get field;
+  _i2.GOrderDirection get direction;
+  _i2.GVerifiableDomainOrderField get field;
   static Serializer<GVerifiableDomainOrder> get serializer =>
       _$gVerifiableDomainOrderSerializer;
   Map<String, dynamic> toJson() =>
@@ -8613,6 +8615,6 @@ abstract class GX509Certificate
   String get value;
   @BuiltValueSerializer(custom: true)
   static Serializer<GX509Certificate> get serializer =>
-      _i2.DefaultScalarSerializer<GX509Certificate>(
+      _i3.DefaultScalarSerializer<GX509Certificate>(
           (Object serialized) => GX509Certificate((serialized as String?)));
 }

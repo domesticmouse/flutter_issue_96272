@@ -1,5 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+import 'package:github_graphql_client%5Csrc%5Cgithub_gql%5C__generated__%5Cgithub_queries.ast.gql.dart'
+    as _i2;
 import 'package:gql/ast.dart' as _i1;
 
 const ViewerDetail = _i1.OperationDefinitionNode(
@@ -490,5 +492,9 @@ const Repositories = _i1.OperationDefinitionNode(
                 ]))
           ]))
     ]));
-const document = _i1.DocumentNode(
-    definitions: [ViewerDetail, PullRequests, AssignedIssues, Repositories]);
+const document = _i1.DocumentNode(definitions: [
+  _i2.ViewerDetail,
+  _i2.PullRequests,
+  _i2.AssignedIssues,
+  _i2.Repositories
+]);

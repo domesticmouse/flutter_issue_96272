@@ -3,7 +3,9 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:github_graphql_client/third_party/github_graphql_schema/__generated__/schema.docs.schema.gql.dart'
+import 'package:github_graphql_client\src\github_gql\__generated__\github_queries.data.gql.dart'
+    as _i4;
+import 'package:github_graphql_client%5Cthird_party%5Cgithub_graphql_schema%5C__generated__%5Cschema.docs.schema.gql.dart'
     as _i2;
 import 'package:github_graphql_client/third_party/github_graphql_schema/__generated__/serializers.gql.dart'
     as _i1;
@@ -409,7 +411,7 @@ abstract class GAssignedIssuesData_search_edges_node__base
     implements
         Built<GAssignedIssuesData_search_edges_node__base,
             GAssignedIssuesData_search_edges_node__baseBuilder>,
-        GAssignedIssuesData_search_edges_node {
+        _i4.GAssignedIssuesData_search_edges_node {
   GAssignedIssuesData_search_edges_node__base._();
 
   factory GAssignedIssuesData_search_edges_node__base(
@@ -436,7 +438,7 @@ abstract class GAssignedIssuesData_search_edges_node__asIssue
     implements
         Built<GAssignedIssuesData_search_edges_node__asIssue,
             GAssignedIssuesData_search_edges_node__asIssueBuilder>,
-        GAssignedIssuesData_search_edges_node {
+        _i4.GAssignedIssuesData_search_edges_node {
   GAssignedIssuesData_search_edges_node__asIssue._();
 
   factory GAssignedIssuesData_search_edges_node__asIssue(
